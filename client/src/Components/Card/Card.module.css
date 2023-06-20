@@ -1,0 +1,65 @@
+.container {
+  
+  width: 15rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  background-color: #90b7de25;
+  height: fit-content;
+  justify-content: space-around;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  transform: scale(1.03);
+  transition: all 0.3s ease-in-out;
+}
+
+.name {
+margin:0.5rem 5%;
+color: black;
+text-align: center;
+}
+
+.image {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.diets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.diets a {
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.healthScore {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-basis: calc(30% + 7%);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    flex-basis: calc(50% + 7%);
+  }
+}

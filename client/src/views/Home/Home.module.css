@@ -1,0 +1,18 @@
+.Contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    background-color: white;
+    color:#051122;
+    font-weight: bolder;
+    height: 40px;
+    margin-top: 60px;
+}
+
+
+.section {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,46 @@
+.Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.pages {
+  border-radius: 3px;
+  width: 28px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.pages:hover {
+  background-color: #ff6b7a89;
+}
+
+.arrows {
+  color: #051122;
+  cursor: pointer;
+}
+
+.activePage {
+  background-color: #ff6b79;
+  width: 28px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.disabled {
+  color: #999999;
+  cursor: not-allowed;
+  /* Add any additional styles if desired */
+}

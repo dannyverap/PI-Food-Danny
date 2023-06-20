@@ -1,0 +1,17 @@
+.orderBar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .orderLabel {
+    font-weight: bold;
+  }
+  
+  .select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
