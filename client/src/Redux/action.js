@@ -10,11 +10,10 @@ export const SET_LOADING = "SET_LOADING"
 export const NAME_SEARCHED = "NAME_SEARCHED"
 
 
-const URL = "http://localhost:3001"
 
 export const getAllDiets = () => {
     return async function (dispatch) {
-        const { data } = await axios.get(`${URL}/diets/`);
+        const { data } = await axios.get(`diets/`);
         return dispatch({ type: GET_ALL_DIETS, payload: data })
     }
 }
@@ -23,7 +22,7 @@ export const getAllRecipes = () => {
     return async function (dispatch) {
       dispatch({ type: SET_LOADING, payload: true }); // Agregar esta acción para establecer isLoading en true
       try {
-        const { data } = await axios.get(`${URL}/recipes/getall`);
+        const { data } = await axios.get(`recipes/getall`);
         dispatch({ type: GET_ALL_RECIPES, payload: data });
       } catch (error) {
         // Manejo de error
@@ -37,7 +36,7 @@ export const getAllRecipes = () => {
     return async function (dispatch) {
       dispatch({ type: SET_LOADING, payload: true }); // Agregar esta acción para establecer isLoading en true
       try {
-        const response = await axios.get(`${URL}/recipes/?name=${name}`);
+        const response = await axios.get(`recipes/?name=${name}`);
         const recipe = response.data;
         dispatch({ type: GET_RECIPE_NAME, payload: recipe });
       } catch (error) {

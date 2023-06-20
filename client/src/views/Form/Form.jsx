@@ -88,7 +88,7 @@ const Form = () => {
         // Agrega el código adicional necesario para manejar la respuesta del servidor
 
         if (Object.entries(error).length === 0) {
-            const response = axios.post(`http://localhost:3001/recipes/`, form);
+            const response = axios.post(`/recipes/`, form);
             
             navigate('/home')
             alert("se agregó correctamente")

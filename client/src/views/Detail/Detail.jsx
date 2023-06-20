@@ -18,7 +18,7 @@ const Detail = () => {
         const findRecipe = async () => {
             dispatch({ type: SET_LOADING, payload: true });
             try {
-                const { data } = await axios.get(`http://localhost:3001/recipes/${id}`);
+                const { data } = await axios.get(`recipes/${id}`);
                 if (data.name) {
                     setRecipe(data);
                 }
@@ -38,7 +38,7 @@ const Detail = () => {
 
         if (confirmDelete) {
             try {
-                await axios.delete(`http://localhost:3001/recipes/${id}`);
+                await axios.delete(`recipes/${id}`);
                 navigate("/home")
             } catch (error) {
                 setError(` ${error}`);
