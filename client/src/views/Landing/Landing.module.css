@@ -1,3 +1,4 @@
+/* Componente.module.css */
 .container {
   height: 100vh;
   background-image: url('../../Utils/fondo.jpeg');
@@ -64,5 +65,24 @@
   }
 }
 
+/* Estilos adicionales para hacerlo responsive */
+@media screen and (max-width: 480px) {
+  .content {
+    width: 80%;
+    height: 30%;
+    margin: 12px;
+    margin-left: 0;
+    align-items: center;
+  }
 
-  
+  .button {
+    font-size: 1.2em;
+    height: 40px;
+    margin: 8px;
+  }
+
+  .content h1 {
+    font-size: 30px;
+    margin: 8px;
+  }
+}
