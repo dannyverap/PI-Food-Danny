@@ -97,12 +97,12 @@ const reducer = (state = initialState, action) => {
             }
             if (state.order.orderType === "orden-za") {
                 orderedRecipes = lastFilter.sort((a, b) => {
-                    return 1 * a.name.localeCompare(b.name);
+                    return -1 * a.name.localeCompare(b.name);
                 })
             }
             if (state.order.orderType === "orden-az") {
                 orderedRecipes = lastFilter.sort((a, b) => {
-                    return -1 * a.name.localeCompare(b.name);
+                    return 1 * a.name.localeCompare(b.name);
                 })
             }
             
