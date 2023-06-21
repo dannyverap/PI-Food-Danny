@@ -1,4 +1,5 @@
-.input{
+/* Componente.module.css */
+.input {
     outline: none;
     border-radius: 12px;
     padding-left: 25px;
@@ -10,13 +11,20 @@
     color: #051122;
     font-size: 2.0vh;
     text-align: left;
-
 }
 
-.input::placeholder{
-    color:#05112254
+.input::placeholder {
+    color: #05112254;
 }
 
-.input:focus{
+.input:focus {
     width: 50vh;
+}
+
+/* Estilos adicionales para hacerlo responsive */
+@media screen and (max-width: 480px) {
+    .input {
+        width: 80%;
+        font-size: 16px;
+    }
 }

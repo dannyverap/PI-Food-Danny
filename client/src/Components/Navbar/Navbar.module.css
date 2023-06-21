@@ -25,6 +25,21 @@
     color: #FF6B79;
 }
 
-.iconLinkedin:hover{
+.iconLinkedin:hover {
     transform: scale(1.1, 1.1);
+}
+
+/* Agregar estilos para dispositivos móviles */
+@media only screen and (max-width: 375px) {
+    .Contenedor {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .text {
+        font-size: 16px;
+    }
+    
+    /* Otros estilos móviles que desees agregar */
 }

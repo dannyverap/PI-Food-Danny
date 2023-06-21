@@ -1,41 +1,48 @@
-
+/* Componente.module.css */
 .clearButton {
-    position: relative;
-    padding: 8px 20px;
-    background: #90b7de57;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight:300;
-    color: black;
-    cursor: pointer;
-    overflow: hidden;
-    z-index: 1;
-    transition: transform 0.3s ease;
+  position: relative;
+  padding: 8px 20px;
+  background: #90b7de57;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.clearButton:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff3f6c;
+  border-radius: 30px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.clearButton:hover:before {
+  transform: translateX(0);
+}
+
+.clearButton:hover {
+  transform: scale(1.1);
+}
+
+.clearButton:active {
+  transform: scale(0.9);
+}
+
+/* Estilos adicionales para hacerlo responsive */
+@media screen and (max-width: 480px) {
+  .clearButton {
+      font-size: 14px;
   }
-  
-  .clearButton:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ff3f6c;
-    border-radius: 30px;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    z-index: -1;
-  }
-  
-  .clearButton:hover:before {
-    transform: translateX(0);
-  }
-  
-  .clearButton:hover {
-    transform: scale(1.1);
-  }
-  
-  .clearButton:active {
-    transform: scale(0.9);
-  }
+}
