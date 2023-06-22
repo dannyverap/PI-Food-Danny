@@ -16,7 +16,7 @@ function App() {
     <div>
 
       {
-        location.pathname !== "/" 
+        pathname !== "/" 
           ? <Navbar/>
           : null
       }

@@ -1,37 +1,38 @@
-/* Componente.module.css */
 .container {
   height: 100vh;
-  background-image: url('../../Utils/fondo.jpeg');
+  background-image: url('../../Utils/fondo2.jpg');
   background-size: cover;
-  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .content {
-  position: relative;
-  width: 80%;
-  height: 50%;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #000000;
+  color: white;
   margin: 12px;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
-  align-content: center;
-  background-color: rgba(140, 131, 131, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
   font-size: 1.8em;
   padding: 1rem;
   box-sizing: border-box;
-  height: 50px;
-  margin: 12px;
+  height: 30px;
+  margin: 5px;
   backdrop-filter: blur(1px);
   animation: waviy 2s infinite;
   border-radius: 10px;
@@ -39,24 +40,28 @@
 
 .button:hover {
   cursor: pointer;
-  transform: translateY(-1px);
-  color: #051122;
 }
 
 .content h1 {
-  font-size: 50px;
-  color: #000000;
+  font-size: 3rem;
+  color: white;
   overflow: hidden;
   white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: 0.15em;
   margin: 12px;
+  font-weight: bolder;
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 0.5rem;
+  ; /* Borde blanco de 2 píxeles */
+  padding: 0.5rem; /* Agregar un poco de espacio alrededor del texto */;
 }
 
+
+
 @keyframes waviy {
-  0%,
-  40%,
-  100% {
+  0%, 40%, 100% {
     transform: translateY(0);
   }
   20% {
@@ -64,21 +69,18 @@
   }
 }
 
-/* Estilos adicionales para hacerlo responsive */
-@media screen and (max-width: 480px) {
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+  
   .content {
-    width: 90%;
-    height: 40%;
+    margin: 0;
   }
-
-  .button {
-    font-size: 1.2em;
-    height: 40px;
-    margin: 8px;
-  }
-
+  
   .content h1 {
-    font-size: 30px;
-    margin: 8px;
+    font-size: 1.5rem;
   }
 }
