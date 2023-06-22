@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { setOrder, setViewFilterAndOrder } from '../../Redux/action';
+import { setOrder } from '../../Redux/action';
 import style from './OrderBar.module.css';
 
 const OrderBar = () => {

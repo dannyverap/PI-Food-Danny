@@ -6,7 +6,6 @@ import {
     SET_ORDER,
     SET_VIEW_FILTER_AND_ORDER,
     SET_LOADING,
-    NAME_SEARCHED,
 } from "./action"
 
 const initialState = {
@@ -26,12 +25,6 @@ const reducer = (state = initialState, action) => {
                 isLoading: action.payload
             };
             
-
-        case NAME_SEARCHED:
-            return {
-                ...state,
-                nameSearched: action.payload
-            };
 
         case GET_ALL_DIETS:
             return {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { setFilter, setOrder, nameSearch } from '../../Redux/action';
+import { setFilter, setOrder } from '../../Redux/action';
 import style from './ClearFilterAndOrder.module.css';
 
 const ClearFilterAndOrder = () => {

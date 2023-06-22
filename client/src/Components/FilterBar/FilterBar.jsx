@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { setViewFilterAndOrder, setFilter } from '../../Redux/action';
+import { setFilter } from '../../Redux/action';
 import style from './FilterBar.module.css';
 
 const FilterBar = () => {
@@ -22,6 +21,12 @@ const FilterBar = () => {
   return (
     <div className={style.filterBar}>
       <span className={style.filterLabel}>Filter by </span>
+      
+      <select className={style.select} onChange={handleChangeOrigin} value={filters.origin}>
+        <option value={'all'}>All Origens</option>
+        <option value={'api'}>API</option>
+        <option value={'db'}>Creados</option>
+      </select>
 
       <select className={style.select} onChange={handleChangeDiet} value={filters.diets}>
         <option value={'all'}>All Diets</option>
@@ -32,11 +37,6 @@ const FilterBar = () => {
         ))}
       </select>
 
-      <select className={style.select} onChange={handleChangeOrigin} value={filters.origin}>
-        <option value={'all'}>All Origens</option>
-        <option value={'api'}>API</option>
-        <option value={'db'}>Creados</option>
-      </select>
     </div>
   );
 };

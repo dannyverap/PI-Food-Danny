@@ -6,11 +6,9 @@ import style from "./FilterAndOrders.module.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { setViewFilterAndOrder } from '../../Redux/action';
-// Corregir el nombre de importación
 
 const FilterAndOrders = () => {
 
-    const diets = useSelector((state) => state.diets);
     const filters = useSelector((state) => state.filters);
     const allRecipes = useSelector((state) => state.allRecipes);
     const nameSearched = useSelector((state) => state.nameSearched);
@@ -24,7 +22,7 @@ const FilterAndOrders = () => {
 
     return (
 
-        <div className={style.Contenedor}> {/* Corregir el nombre de la clase */}
+        <div className={style.Contenedor}> 
             <SearchBar />
             <FilterBar />
             <OrderBar />

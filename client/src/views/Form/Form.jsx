@@ -85,8 +85,6 @@ const Form = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        // Agrega el código adicional necesario para manejar la respuesta del servidor
-
         if (Object.entries(error).length === 0) {
             const response = axios.post(`/recipes/`, form);
             
