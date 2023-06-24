@@ -7,7 +7,7 @@ const ClearFilterAndOrder = () => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(setFilter({ diets: 'all', origin: 'all' }));
+    dispatch(setFilter({ diets: 'all', origin: 'all', healthScore:0 }));
     dispatch(setOrder({ orderType: '' }));
 
   };

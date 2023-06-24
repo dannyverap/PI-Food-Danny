@@ -18,7 +18,7 @@ const FilterAndOrders = () => {
 
     useEffect(() => {
         dispatch(setViewFilterAndOrder());
-    }, [filters.diets, filters.origin, allRecipes, nameSearched,order]);
+    }, [filters.diets, filters.origin,filters.healthScore, allRecipes, nameSearched,order]);
 
     return (
 

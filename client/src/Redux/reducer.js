@@ -13,7 +13,7 @@ const initialState = {
     allRecipes: [],
     recipesCopy: [],
     isLoading: false,
-    filters: { diets: "all", origin: "all" },
+    filters: { diets: "all", origin: "all", healthScore:0 },
     order: { orderType: "" },
 };
 
@@ -69,7 +69,13 @@ const reducer = (state = initialState, action) => {
                 return true;
             });
 
-            const lastFilter = originFiltered.filter(recipe => {
+            const healthScoreFilter = originFiltered.filter( recipe => {
+                if (recipe.healthScore>=state.filters.healthScore ) {
+                    return true;
+                }
+            });
+
+            const lastFilter = healthScoreFilter.filter(recipe => {
                 if (state.filters.diets !== 'all') {
                     return recipe.diets.includes(state.filters.diets);
                 }
